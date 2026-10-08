@@ -5,7 +5,7 @@
   "description": "A mobile-friendly skateboarding game with tricks, combos, and high scores.",
   "scripts": {
     "start": "node server.cjs",
-    "test": "node --check dist/game.js && node check-game.cjs"
+    "test": "node --check dist/game.js && node --check dist/skating.js && node check-game.cjs"
   },
   "engines": { "node": ">=18" }
 }
