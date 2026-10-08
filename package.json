@@ -1,0 +1,11 @@
+{
+  "name": "kickpush",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A mobile-friendly skateboarding game with tricks, combos, and high scores.",
+  "scripts": {
+    "start": "node server.cjs",
+    "test": "node --check dist/game.js && node check-game.cjs"
+  },
+  "engines": { "node": ">=18" }
+}

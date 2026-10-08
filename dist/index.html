@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f2f4ed"><meta name="description" content="Your next great skate session. Pop tricks, keep the combo alive, and chase your best score in Kickpush.">
+<title>Kickpush — One more run.</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23d4f45b'/%3E%3Cpath d='M7 11h18v8H7z' fill='%23202b29'/%3E%3Ccircle cx='10' cy='23' r='3' fill='%23202b29'/%3E%3Ccircle cx='22' cy='23' r='3' fill='%23202b29'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css"><script defer src="game.js"></script>
+</head>
+<body>
+<main class="shell">
+<header class="header"><a class="brand" href="./" aria-label="Kickpush home"><svg viewBox="0 0 44 32" aria-hidden="true"><path d="M4 12q2 5 8 5h20q6 0 8-5"/><path d="M9 17v4m26-4v4"/><circle cx="12" cy="25" r="3"/><circle cx="32" cy="25" r="3"/></svg>kickpush<span class="brand-dot">®</span></a><div class="header-note">LESS SCROLLING. MORE ROLLING.</div><button id="sound" class="icon-button" aria-label="Enable sound" title="Sound off"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Zm5 4 5 6m0-6-5 6"/></svg></button></header>
+<section class="session-title"><div><div class="eyebrow"><span class="tiny-board"></span> FREE SKATE · VOL. 01</div><h1>The concrete club<span>.</span></h1></div><div class="location"><svg viewBox="0 0 24 24"><path d="M18 10c0 5-6 10-6 10S6 15 6 10a6 6 0 1 1 12 0Z"/><circle cx="12" cy="10" r="2"/></svg> SUNSET DISTRICT <span>90 SEC / NO LIMITS</span></div></section>
+<section class="game-wrap" aria-label="Skateboarding game">
+<div class="hud"><div class="score-block"><span class="hud-label">SESSION SCORE</span><strong id="score">000000</strong></div><div class="best-block"><span class="hud-label">PERSONAL BEST</span><strong id="best">000000</strong></div><div class="time-block"><span class="hud-label">TIME LEFT</span><strong id="time">1:30</strong></div><button id="pause" class="pause" aria-label="Pause game"><svg viewBox="0 0 24 24"><path d="M8 6v12m8-12v12"/></svg></button></div>
+<canvas id="park" aria-label="A skater cruising through a city skatepark. Use the trick controls below." role="img"></canvas>
+<div id="combo" class="combo" hidden><div><span id="combo-label">OLLIE</span><b id="multiplier">×1</b></div><strong id="combo-score">100</strong><div class="combo-track"><i id="combo-meter"></i></div><small id="combo-hint">LAND IT. LINK IT. KEEP IT GOING.</small></div>
+<div id="feedback" class="feedback" aria-live="polite"></div>
+<div id="overlay" class="overlay"><div class="start-panel"><span class="panel-kicker">THE STREETS ARE YOURS</span><h2>Find your flow.</h2><p>Land tricks. Link combos.<br>Make every second count.</p><button id="start" class="start-button">Drop in <svg viewBox="0 0 24 24"><path d="m9 5 10 7-10 7Z"/></svg></button><div class="start-note">TOUCH CONTROLS + KEYBOARD</div></div></div>
+<div class="park-caption"><span>01 / SUNSET PARK</span><span id="ride-status">GOOD TIMES. GREAT LINES.</span></div>
+</section>
+<section class="controls" aria-label="Trick controls"><div class="control-intro"><span class="eyebrow">MAKE YOUR MOVE</span><p>Keep the combo rolling.</p></div><div class="trick-buttons"><button class="trick primary" data-action="ollie"><span class="key">SPACE</span><svg viewBox="0 0 32 24"><path d="m5 18 8-11 5 4 9-7m-7 0h7v7"/></svg><strong>Ollie</strong><small>GET SOME AIR</small></button><button class="trick" data-action="flip"><span class="key">K</span><svg viewBox="0 0 32 24"><path d="M7 9c3-8 18-7 19 3M25 5l1 7-7-1M25 16c-3 8-18 7-19-3m1 7-1-7 7 1"/></svg><strong>Kickflip</strong><small>FLIP THE DECK</small></button><button class="trick" data-action="spin"><span class="key">L</span><svg viewBox="0 0 32 24"><path d="M9 8c4-6 16-5 16 2 0 7-17 8-17 1m-1 6 1-6 6 1"/></svg><strong>360 Spin</strong><small>TURN IT UP</small></button><button class="trick" data-action="grind"><span class="key">HOLD J</span><svg viewBox="0 0 32 24"><path d="M3 13h26M7 13v8m18-8v8M9 8l14-3m-12 5v2m10-4v2"/></svg><strong>Grind / Manual</strong><small>HOLD TO LINK</small></button></div></section>
+<footer><div class="tip"><span class="tip-symbol">✦</span><span><b>A little style goes a long way.</b> Mix tricks for bigger multipliers. Bank your combo before you bail.</span></div><span class="footer-mark">ONE MORE RUN.</span></footer>
+</main>
+<dialog id="help"><h2>Find your flow</h2><p>The skater cruises automatically. Tap Ollie to jump over blocks and gaps. Kickflip and 360 also jump for you from the ground.</p><p>Combine different tricks in the air. Hold Grind / Manual to catch rails or connect tricks on flat ground. Release to bank your combo after 3 seconds. A bail loses the current combo.</p><p>You have 90 seconds. Beat the best score saved on this device.</p><button id="close-help">Got it</button></dialog>
+</body></html>
