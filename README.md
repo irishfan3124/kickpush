@@ -2,7 +2,7 @@
 
 A mobile-friendly skateboarding arcade game. Cruise through Sunset Park, land tricks, link combos, and chase your highest score in 90-second sessions.
 
-[Play the hosted game](https://kickpush-skate.nutty-grebe-1554.chatgpt.site) (private Sites deployment; authorized sign-in required).
+[Play Kickpush on GitHub Pages](https://irishfan3124.github.io/kickpush/). Open the link on your phone or desktop; no sign-in is needed.
 
 ## Run locally
 
@@ -43,3 +43,14 @@ The checks cover aerial combos, multipliers, banking, manuals, bails, pause, obs
 - `check-game.cjs`: gameplay checks
 
 Built with HTML, CSS, and JavaScript Canvas. Fonts load from Google Fonts when available, with system fallbacks. The `dist` directory can be deployed to any static host.
+
+## Publish updates to GitHub Pages
+
+GitHub Pages serves the root of the `gh-pages` branch. After committing changes to `dist` on `main`, publish the updated game with:
+
+```sh
+git push origin main
+git subtree push --prefix dist origin gh-pages
+```
+
+GitHub builds and publishes the updated branch automatically. The `.nojekyll` file keeps the game files unchanged during publication.
